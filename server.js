@@ -9,17 +9,17 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-const db = knex({ 
+const db = knex({
   // connect to your own database here:
   client: 'pg',
   connection: {
-    connectionString : process.env.DATABASE_URL,
-    ssl: { rejectUnauthorized : false },
-    host : process.env.DATABASE_HOST,
-    port : 5432,
-    user : process.env.DATABASE.USER,
-    password : process.env.DATABASE.PASSWORD,
-    database : process.env.DATABASE.DB
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
+    host: process.env.DATABASE_HOST,
+    port: 5432,
+    user: process.env.DATABASE_USER, // Corrected variable name
+    password: process.env.DATABASE_PASSWORD, // Corrected variable name
+    database: process.env.DATABASE_DB // Corrected variable name
   }
 });
 
